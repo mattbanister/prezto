@@ -11,3 +11,15 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+pyenv virtualenvwrapper
+
+# dotfiles repo
+alias config="/usr/bin/git --git-dir="$HOME"/.cfg/ --work-tree="$HOME
+
+#cargo
+source $HOME/.cargo/env
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
